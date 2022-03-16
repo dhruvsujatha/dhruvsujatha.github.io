@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -53,7 +55,16 @@
           <div class="col-md-1">
           </div>
           <div class="col-md-4">
-            <h1 class="title dark-mode-word">Hi! I'm Dhruv Sujatha.</h1>
+            <h1 class="title dark-mode-word">Hi! I'm <span class="typewriter"></span></h1>
+            <script>
+              var typed = new Typed('.typewriter', {
+                strings: ["Dhruv Sujatha!", "a Developer!", "a Designer!", "a Learner!"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                smartBackspace: true,
+                loop: true
+              });
+            </script>
             <hr class="dark-mode-hr">
           </div>
           <div class="col-md-2">
