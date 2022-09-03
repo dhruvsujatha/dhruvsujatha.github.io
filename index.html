@@ -50,7 +50,30 @@
           <div class="col-md-1">
           </div>
           <div class="col-md-4">
-            <img src="public/images/dsujatha.png" class="profile-picture">
+            <script>
+              var imgNum = 0;
+              function replaceImg()
+              {
+                var images = [
+                              "public/images/dsujatha.png", 
+                              "public/images/dsujatha_dist_5.jpeg",
+                              "public/images/dsujatha_dist_10.jpeg",
+                              "public/images/dsujatha_dist_15.jpeg",
+                              "public/images/dsujatha_dist_20.jpeg",
+                              "public/images/dsujatha_dist_15.jpeg",
+                              "public/images/dsujatha_dist_10.jpeg",
+                              "public/images/dsujatha_dist_5.jpeg"
+                            ];
+                imgNum++;
+                if (imgNum == images.length) {
+                    imgNum = 0;
+                }
+                document.getElementsByClassName("profile-picture")[0].src = images[imgNum]; 
+              }
+              //This code was taken from Dr. Gustavo Rodriguez-Rivera's website.
+              //Check it out at: https://www.cs.purdue.edu/homes/grr/
+            </script>
+            <img src="public/images/dsujatha.png" class="profile-picture" onmousedown="replaceImg();">
           </div>
           <div class="col-md-1">
           </div>
