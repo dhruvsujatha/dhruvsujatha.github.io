@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your GPG Key</title>
+    <!-- Add Font Awesome CSS for the clipboard and download icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="title-bar">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="zoom-button"></div>
+            <button class="copy-button" onclick="copyGpgKey()">
+                <i class="fas fa-clipboard copy-icon"></i>
+            </button>
+        </div>
+        <div class="prompt">
+            <span style="color: #FFCC00;">dhruv@me</span><span style="color: #00FF00;">:~$ gpg --armor --export 5C63285281E6995F</span>
+        </div>
+        <div class="output">
+            <!-- File content will be loaded here -->
+        </div>
+        <div class="button-container">
+            <button class="download-button" onclick="downloadGpgKey()">Download Key</button>
+            <button class="view-button" onclick="viewGpgKey()">View on Keyserver</button>
+        </div>
+    </div>
+
+    <!-- Add Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+    <!-- Link to your custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

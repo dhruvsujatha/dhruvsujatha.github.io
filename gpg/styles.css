@@ -1,0 +1,131 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #515151; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.terminal-window {
+    position: relative;
+    width: 800px; /* Larger width */
+    height: 500px; /* Larger height */
+    background-color: #000;
+    color: #00FF00;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Add this line to hide overflow */
+}
+.title-bar {
+    position: sticky; /* Make the title bar sticky */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-color: #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.title-bar .close-button,
+.title-bar .minimize-button,
+.title-bar .zoom-button {
+    width: 12px;
+    height: 12px;
+    background-color: #ff5f56;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.title-bar .minimize-button {
+    background-color: #ffbd2e;
+}
+.title-bar .zoom-button {
+    background-color: #28ca42;
+}
+.title-bar .close-button:hover,
+.title-bar .minimize-button:hover,
+.title-bar .zoom-button:hover {
+    background-color: #ff3b30;
+}
+.prompt {
+    color: #00FF00;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.output {
+    white-space: pre-wrap;
+    padding: 0 10px;
+    margin-top: 5px;
+    flex-grow: 1;
+    overflow: auto; /* Add this line to enable scrolling for long content */
+}
+.copy-button {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    margin: 2px;
+    padding: 2px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.copy-icon {
+    color: #ffffff;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons at both ends */
+    padding: 10px; /* Add some padding for spacing */
+    background-color: #333; /* Background for buttons */
+}
+
+.button-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.button-container .download-button {
+    background-color: #333;
+    color: #fff;
+    outline: 2px solid #fff;
+}
+
+.button-container .view-button {
+    background-color: #333;
+    color: #fff;
+    outline: 2px solid #fff;
+}
+
+.button-container .download-button:hover {
+    background-color: #2f96db;
+}
+
+.button-container .view-button:hover {
+    background-color: #2f96db;
+}
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the alert */
+    padding: 10px;
+    font-weight: bold;
+    background-color: #333;
+    color: #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    text-align: center; /* Center text within the alert */
+}
