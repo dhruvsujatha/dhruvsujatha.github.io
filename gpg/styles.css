@@ -52,7 +52,7 @@ body {
 .title-bar .close-button:hover,
 .title-bar .minimize-button:hover,
 .title-bar .zoom-button:hover {
-    background-color: #ff3b30;
+    opacity: 0.75;
 }
 .prompt {
     color: #00FF00;
